@@ -1,10 +1,10 @@
 package br.ce.wcaquino.servicos;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import br.ce.wcaquino.entidades.Usuario;
 
 public class AssertTest {
 
@@ -14,6 +14,7 @@ public class AssertTest {
         assertFalse(false);
 
         assertEquals(1, 1);
+        // assertEquals("Erro comparação", 1, 2);
         assertEquals(0.51234, 0.512, 0.001);
         assertEquals(Math.PI, 3.14, 0.01);
 
@@ -23,9 +24,27 @@ public class AssertTest {
         assertEquals(i, i2.intValue());
 
         assertEquals("bola", "bola");
+        assertNotEquals("bola", "casa");
         assertTrue("bola".equalsIgnoreCase("Bola"));
         assertTrue("bola".startsWith("bo"));
 
+        Usuario u1 = new Usuario("Usuario 1");
+        Usuario u2 = new Usuario("Usuario 1");
+        // Usuario u3 = u2;
+        Usuario u3 = null;
+
+        assertEquals(u1, u2);
+
+        // assertSame(u1, u2); //mesma instancia
+        assertSame(u2, u2); //mesma instancia
+        assertNotSame(u1, u2); //mesma instancia
+        // assertSame(u3, u2); //mesma instancia
+        assertTrue(u3 == null);
+        assertNull(u3);
+        assertNotNull(u2);
+        
+    
+    
     }
 
 }
