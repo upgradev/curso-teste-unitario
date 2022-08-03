@@ -1,4 +1,4 @@
-package br.ce.wcaquino.servicos;
+package br.ce.wcaquino;
 
 import static org.junit.Assert.*;
 
