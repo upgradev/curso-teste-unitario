@@ -26,7 +26,7 @@ import br.ce.wcaquino.entidades.Usuario;
 import br.ce.wcaquino.exceptions.FilmeSemEstoqueException;
 import br.ce.wcaquino.exceptions.LocadoraException;
 
-@RunWith(Parameterized.class)
+// @RunWith(Parameterized.class)
 public class CalculoValorLocacaoTest {
 
 	@InjectMocks
